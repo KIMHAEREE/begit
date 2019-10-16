@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>고객센터</title>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+      <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+  
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        function slide() {
+            $("#today_slide_ul").animate({
+                left: "-=187px"
+            }, 1000, function () {
+                $(this).css({
+                    "left": 0
+                });
+                $("#today_slide_ul").append($("#today_slide_ul").children("li").eq(0));
+            });
+            current++;
+            if (current == 5) current = 0;
+        }
+    </script>
+<style type="text/css">
+    #accordion-container {
+	font-size: 13px;
+	background: #ffffff;
+	padding: 5px 10px 10px 10px;
+	border: 1px solid #cccccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 5px 15px #cccccc;
+	-webkit-box-shadow: 0 5px 15px #cccccc;
+	box-shadow: 0 5px 15px #cccccc;
+    /* 추가 css */
+    width: 75%;
+    float: left;
+}
+
+.accordion-header {
+	font-size: 16px;
+	background: #ebebeb;
+	margin: 5px 0 0 0;
+	padding: 5px 20px;
+	border: 1px solid #cccccc;
+	cursor: pointer;
+	color: #666666;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.active-header {
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background: url(images/active-header.gif) #cef98d;
+	background-repeat: no-repeat;
+	background-position: right 50%;
+}
+
+.active-header:hover {
+	background: url(images/active-header.gif) #c6f089;
+	background-repeat: no-repeat;
+	background-position: right 50%;
+}
+
+.inactive-header {
+	background: url(images/inactive-header.gif) #ebebeb;
+	background-repeat: no-repeat;
+	background-position: right 50%;
+}
+
+.inactive-header:hover {
+	background: url(images/inactive-header.gif) #f5f5f5;
+	background-repeat: no-repeat;
+	background-position: right 50%;
+}
+
+.accordion-content {
+	display: none;
+	padding: 20px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	border-top: 0;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+    
+</style>
+</head>
+
+<body>
+   
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- Side navigation -->
+            <div class="sidenav">
+                <div class="sidenav_wrap">
+                    <div class="side_btn">
+                         <button class="cust">구매자</button>
+                         <button class="seller">판매자</button>
+                    </div>
+                    <a href="#" id="notice">공지사항</a>
+                    <a href="#" id="faq">자주하는질문/FAQ</a>
+                    <a href="#" id="1moon">1:1문의</a>
+                    <a href="#" id="review">Review</a>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+      
+        <!-- FOOTER -->
+        <footer id="footer">
+            <!-- top footer -->
+            <div class="section">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">About Us</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                                <ul class="footer-links">
+                                    <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">Categories</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">Hot deals</a></li>
+                                    <li><a href="#">Laptops</a></li>
+                                    <li><a href="#">Smartphones</a></li>
+                                    <li><a href="#">Cameras</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix visible-xs"></div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">Information</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Orders and Returns</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">Service</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">View Cart</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">Track My Order</a></li>
+                                    <li><a href="#">Help</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /row -->
+                </div>
+                <!-- /container -->
+            </div>
+            <!-- /top footer -->
+            <!-- bottom footer -->
+            <div id="bottom-footer" class="section">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="footer-payments">
+                                <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                                <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                            </ul> <span class="copyright">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</span> </div>
+                    </div>
+                    <!-- /row -->
+                </div>
+                <!-- /container -->
+            </div>
+            <!-- /bottom footer -->
+        </footer>
+        <!-- /FOOTER -->
+        <!-- jQuery Plugins -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/nouislider.min.js"></script>
+        <script src="js/jquery.zoom.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!-- util functions included in the CodyHouse framework -->
+        <script src="assets/js/main.js"></script>
+    </div>
+</body>
+
+</html>
